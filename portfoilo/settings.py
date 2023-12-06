@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-#dufele97ykjd0$qizyp!xdi+c@9w8k7sjx*@0ds*20*2e!_9#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["portfoilo-zhmc.onrender.com", "127.0.0.1:8000", "localhost:8000"]
+ALLOWED_HOSTS = ["portfoilo-zhmc.onrender.com", "127.0.0.1", "localhost"]
 
 
 # Application definition
