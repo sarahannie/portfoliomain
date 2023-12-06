@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from myapp.views import  Homepage, Contactpage, Aboutpage, Servicepage, Projectpage
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 
 urlpatterns = [
@@ -27,5 +28,9 @@ urlpatterns = [
     path('about', Aboutpage, name='about'),
     path('service', Servicepage, name='service'),
     path('project', Projectpage, name='project'),
-]
+    
+    
+],
+
+urlpatterns += staticfiles_urlpatterns()
 
