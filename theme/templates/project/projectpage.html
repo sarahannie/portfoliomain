@@ -1,0 +1,281 @@
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <title>Django Tailwind</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link
+        rel="stylesheet"
+        href="{% static 'css/dist/project.css' %}"
+      />
+		{% tailwind_css %}
+	</head>
+
+	<body >
+        <nav>
+            <div class="flex flex-wrap items-center justify-between bg-black md:p-0">
+              <div class="p-3 px-4 text-2xl text-white logo">Sarahannie</div>
+              <div class="p-3 md:hidden">
+                <i
+                  id="menu-button"
+                  class="fa-solid fa-grip-vertical h-6 transition-opacity duration-500 ease-in-out cursor-pointer hover:opacity-[0.5] text-white"
+                ></i>
+              </div>
+              <div
+                id="menu"
+                class="hidden md:block"
+              >
+                <ul class="items-center w-screen md:w-auto md:flex">
+                  <li
+                    class="p-4 px-8 text-xl text-gray-300 border-b border-gray-600 md:border-0 hover:text-gray-500"
+                  >
+                    <a href="{% url 'home' %}">Home</a>
+                  </li>
+                  <li
+                    class="p-4 px-8 text-xl text-gray-300 border-b border-gray-600 md:border-0 hover:text-gray-500"
+                  >
+                    <a href="{% url 'about' %}">About me</a>
+                  </li>
+                  <li
+                    class="p-4 px-8 text-xl text-gray-300 border-b border-gray-600 md:border-0 hover:text-gray-500"
+                  >
+                    <a href="{% url 'service' %}">Service</a>
+                  </li>
+                  <li
+                    class="p-4 px-8 text-xl text-gray-300 border-b border-gray-600 md:border-0 hover:text-gray-500"
+                  >
+                    <a href="{% url 'project' %}">Project</a>
+                  </li>
+                  <li
+                    class="p-4 px-8 text-xl text-gray-300 border-b border-gray-600 md:border-0 hover:text-gray-500"
+                  >
+                    <a href="{% url 'contact' %}">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </nav>
+        <!-- navbar done -->
+
+        <!-- main start -->
+        <main class="py-[5rem] bg-gray-900">
+            <section class="bg-gray-900 pb-[5rem]">
+                
+                <div class="card-container grid grid-cols-1 md:grid-cols-2 gap-20 ">
+                  <div class="flex lg:h-[15rem] sm:h-[25rem]  bg-gray-900 antialiased">
+                    <div class="relative mx-[5%]">
+                      <div class="z-50 p-3 mt-10 max-w-xs w-xs grid grid-cols-1 cursor-default select-none rounded bg-white  shadow-lg">
+                        <div class="font-semibold text-xl mb-2 ml-2 text-gray-900 ">Project Name</div>
+                        <div class="flex">
+                          <button
+                            class="transform mouse-pointer bg-gray-900 text-sm text-white mx-2 py-1 px-2 font-semibold rounded hover:bg-gray-700 dark:hover:bg-gray-600 hover:scale-90   focus:bg-gray-700 dark:focus:bg-gray-600 focus:outline-none">Live</button>
+                          <button
+                            class="transform mouse-pointer bg-gray-900 text-sm text-white px-2 font-semibold rounded hover:bg-gray-700 dark:hover:bg-gray-600  hover:scale-90 dark:focus:bg-gray-600 focus:outline-none">Code</button>
+                        </div>
+                        <div class="my-2 mx-2 mr-5">
+                          <p class="text-gray-900 text-sm">
+                            A brief description of what the project is and what it does and technologies used.
+                          </p>
+                        </div>
+                        <div>
+                          <div class="font-semibold text-l text-gray-900">Tech Stack:</div>
+                          <div>
+                              <span class="transform transition-all duration-150 inline-block bg-blue-400 bg-opacity-75 rounded px-1 py-1 text-xs font-thin text-black  hover:shadow-sm  hover:scale-105">ReactJS</span>
+                            <span class="transform transition-all duration-150 inline-block bg-pink-400 bg-opacity-100 rounded px-1 py-1  text-xs font-thin text-pink-900  hover:shadow-sm  hover:scale-105">Tailwind</span>
+                            <span class="transform transition-all duration-150 inline-block bg-yellow-400  bg-opacity-75 rounded px-1 py-1  text-xs font-thin text-yellow-900 hover:shadow-sm  hover:scale-105">Javascript</span>
+                          </div>
+                        </div>
+                      </div>
+                          <img
+                        class="sm:block lg:absolute z-0 sm:mx-2 sm:max-w-[10rem] lg:mx-72 lg:-my-56 sm:my-56 h-[20rem] lg:h-64 lg:max-w-xs   lg:w-xl object-cover object-top hover:bg-opacity-50 transform hover:scale-125 border-gray-600 border border-opacity-50 rounded-xl shadow-lg transition-all duration-150"
+                        src="https://camo.githubusercontent.com/78889a2ff752043bd00ea43b0dc9fb85b8818345e190b2af5ce4d4eff307db64/68747470733a2f2f692e696d6775722e636f6d2f645744334449522e6a7067">
+                      </img>
+                    </div>
+                  </div>
+                  <div class="flex lg:h-[15rem] sm:h-[25rem]  bg-gray-900 antialiased">
+                    <div class="relative mx-[5%]">
+                      <div class="z-50 p-3 mt-10 max-w-xs w-xs grid grid-cols-1 cursor-default select-none rounded bg-white  shadow-lg">
+                        <div class="font-semibold text-xl mb-2 ml-2 text-gray-900 ">Project Name</div>
+                        <div class="flex">
+                          <button
+                            class="transform mouse-pointer bg-gray-900 text-sm text-white mx-2 py-1 px-2 font-semibold rounded hover:bg-gray-700 dark:hover:bg-gray-600 hover:scale-90   focus:bg-gray-700 dark:focus:bg-gray-600 focus:outline-none">Live</button>
+                          <button
+                            class="transform mouse-pointer bg-gray-900 text-sm text-white px-2 font-semibold rounded hover:bg-gray-700 dark:hover:bg-gray-600  hover:scale-90 dark:focus:bg-gray-600 focus:outline-none">Code</button>
+                        </div>
+                        <div class="my-2 mx-2 mr-5">
+                          <p class="text-gray-900 text-sm">
+                            A brief description of what the project is and what it does and technologies used.
+                          </p>
+                        </div>
+                        <div>
+                          <div class="font-semibold text-l text-gray-900">Tech Stack:</div>
+                          <div>
+                              <span class="transform transition-all duration-150 inline-block bg-blue-400 bg-opacity-75 rounded px-1 py-1 text-xs font-thin text-black  hover:shadow-sm  hover:scale-105">ReactJS</span>
+                            <span class="transform transition-all duration-150 inline-block bg-pink-400 bg-opacity-100 rounded px-1 py-1  text-xs font-thin text-pink-900  hover:shadow-sm  hover:scale-105">Tailwind</span>
+                            <span class="transform transition-all duration-150 inline-block bg-yellow-400  bg-opacity-75 rounded px-1 py-1  text-xs font-thin text-yellow-900 hover:shadow-sm  hover:scale-105">Javascript</span>
+                          </div>
+                        </div>
+                      </div>
+                          <img
+                        class="sm:block lg:absolute z-0 sm:mx-2 sm:max-w-[10rem] lg:mx-72 lg:-my-56 sm:my-56 h-[20rem] lg:h-64 lg:max-w-xs   lg:w-xl object-cover object-top hover:bg-opacity-50 transform hover:scale-125 border-gray-600 border border-opacity-50 rounded-xl shadow-lg transition-all duration-150"
+                        src="https://camo.githubusercontent.com/78889a2ff752043bd00ea43b0dc9fb85b8818345e190b2af5ce4d4eff307db64/68747470733a2f2f692e696d6775722e636f6d2f645744334449522e6a7067">
+                      </img>
+                    </div>
+                  </div>
+                  <div class="flex lg:h-[15rem] sm:h-[25rem]  bg-gray-900 antialiased">
+                    <div class="relative mx-[5%]">
+                      <div class="z-50 p-3 mt-10 max-w-xs w-xs grid grid-cols-1 cursor-default select-none rounded bg-white  shadow-lg">
+                        <div class="font-semibold text-xl mb-2 ml-2 text-gray-900 ">Project Name</div>
+                        <div class="flex">
+                          <button
+                            class="transform mouse-pointer bg-gray-900 text-sm text-white mx-2 py-1 px-2 font-semibold rounded hover:bg-gray-700 dark:hover:bg-gray-600 hover:scale-90   focus:bg-gray-700 dark:focus:bg-gray-600 focus:outline-none">Live</button>
+                          <button
+                            class="transform mouse-pointer bg-gray-900 text-sm text-white px-2 font-semibold rounded hover:bg-gray-700 dark:hover:bg-gray-600  hover:scale-90 dark:focus:bg-gray-600 focus:outline-none">Code</button>
+                        </div>
+                        <div class="my-2 mx-2 mr-5">
+                          <p class="text-gray-900 text-sm">
+                            A brief description of what the project is and what it does and technologies used.
+                          </p>
+                        </div>
+                        <div>
+                          <div class="font-semibold text-l text-gray-900">Tech Stack:</div>
+                          <div>
+                              <span class="transform transition-all duration-150 inline-block bg-blue-400 bg-opacity-75 rounded px-1 py-1 text-xs font-thin text-black  hover:shadow-sm  hover:scale-105">ReactJS</span>
+                            <span class="transform transition-all duration-150 inline-block bg-pink-400 bg-opacity-100 rounded px-1 py-1  text-xs font-thin text-pink-900  hover:shadow-sm  hover:scale-105">Tailwind</span>
+                            <span class="transform transition-all duration-150 inline-block bg-yellow-400  bg-opacity-75 rounded px-1 py-1  text-xs font-thin text-yellow-900 hover:shadow-sm  hover:scale-105">Javascript</span>
+                          </div>
+                        </div>
+                      </div>
+                          <img
+                        class="sm:block lg:absolute z-0 sm:mx-2 sm:max-w-[10rem] lg:mx-72 lg:-my-56 sm:my-56 h-[20rem] lg:h-64 lg:max-w-xs   lg:w-xl object-cover object-top hover:bg-opacity-50 transform hover:scale-125 border-gray-600 border border-opacity-50 rounded-xl shadow-lg transition-all duration-150"
+                        src="https://camo.githubusercontent.com/78889a2ff752043bd00ea43b0dc9fb85b8818345e190b2af5ce4d4eff307db64/68747470733a2f2f692e696d6775722e636f6d2f645744334449522e6a7067">
+                      </img>
+                    </div>
+                  </div>
+                  <div class="flex lg:h-[15rem] sm:h-[25rem]  bg-gray-900 antialiased">
+                    <div class="relative mx-[5%]">
+                      <div class="z-50 p-3 mt-10 max-w-xs w-xs grid grid-cols-1 cursor-default select-none rounded bg-white  shadow-lg">
+                        <div class="font-semibold text-xl mb-2 ml-2 text-gray-900 ">Project Name</div>
+                        <div class="flex">
+                          <button
+                            class="transform mouse-pointer bg-gray-900 text-sm text-white mx-2 py-1 px-2 font-semibold rounded hover:bg-gray-700 dark:hover:bg-gray-600 hover:scale-90   focus:bg-gray-700 dark:focus:bg-gray-600 focus:outline-none">Live</button>
+                          <button
+                            class="transform mouse-pointer bg-gray-900 text-sm text-white px-2 font-semibold rounded hover:bg-gray-700 dark:hover:bg-gray-600  hover:scale-90 dark:focus:bg-gray-600 focus:outline-none">Code</button>
+                        </div>
+                        <div class="my-2 mx-2 mr-5">
+                          <p class="text-gray-900 text-sm">
+                            A brief description of what the project is and what it does and technologies used.
+                          </p>
+                        </div>
+                        <div>
+                          <div class="font-semibold text-l text-gray-900">Tech Stack:</div>
+                          <div>
+                              <span class="transform transition-all duration-150 inline-block bg-blue-400 bg-opacity-75 rounded px-1 py-1 text-xs font-thin text-black  hover:shadow-sm  hover:scale-105">ReactJS</span>
+                            <span class="transform transition-all duration-150 inline-block bg-pink-400 bg-opacity-100 rounded px-1 py-1  text-xs font-thin text-pink-900  hover:shadow-sm  hover:scale-105">Tailwind</span>
+                            <span class="transform transition-all duration-150 inline-block bg-yellow-400  bg-opacity-75 rounded px-1 py-1  text-xs font-thin text-yellow-900 hover:shadow-sm  hover:scale-105">Javascript</span>
+                          </div>
+                        </div>
+                      </div>
+                          <img
+                        class="sm:block lg:absolute z-0 sm:mx-2 sm:max-w-[10rem] lg:mx-72 lg:-my-56 sm:my-56 h-[20rem] lg:h-64 lg:max-w-xs   lg:w-xl object-cover object-top hover:bg-opacity-50 transform hover:scale-125 border-gray-600 border border-opacity-50 rounded-xl shadow-lg transition-all duration-150"
+                        src="https://camo.githubusercontent.com/78889a2ff752043bd00ea43b0dc9fb85b8818345e190b2af5ce4d4eff307db64/68747470733a2f2f692e696d6775722e636f6d2f645744334449522e6a7067">
+                      </img>
+                    </div>
+                  </div>
+                  
+                </div>
+              </section>
+        </main>
+        <!-- main end -->
+
+        <!-- footer start -->
+        <footer class="relative bg-gray-900 pt-8 pb-6">
+            <div class="container mx-auto px-4">
+              <div class="flex flex-wrap text-left lg:text-left">
+                <div class="w-full lg:w-6/12 px-4">
+                  <h4 class="text-3xl fonat-semibold text-white">Let's keep in touch!</h4>
+                  <h5 class="text-lg mt-0 mb-2 text-white">
+                    Find us on any of these platforms, we respond 1-2 business days.
+                  </h5>
+                  <div class="mt-6 lg:mb-0 mb-6">
+                    <button class="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+                      <i class="fab fa-twitter"></i></button><button class="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+                      <i class="fab fa-facebook-square"></i></button><button class="bg-white text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+                      <i class="fab fa-dribbble"></i></button><button class="bg-white text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+                      <i class="fab fa-github"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="w-full lg:w-6/12 px-4">
+                  <div class="flex flex-wrap items-top mb-6">
+                    <div class="w-full lg:w-4/12 px-4 ml-auto">
+                      <span class="block uppercase text-white text-sm font-semibold mb-2">Useful Links</span>
+                      <ul class="list-unstyled">
+                        <li>
+                          <a class="text-white hover:text-blueGray-100 font-semibold block pb-2 text-sm" href="#">About Us</a>
+                        </li>
+                        <li>
+                          <a class="text-white hover:text-blueGray-100 font-semibold block pb-2 text-sm" href="#">Service</a>
+                        </li>
+                        <li>
+                          <a class="text-white hover:text-blueGray-100 font-semibold block pb-2 text-sm" href="https://github.com/sarahannie">Github</a>
+                        </li>
+                        <li>
+                          <a class="text-white hover:text-blueGray-100 font-semibold block pb-2 text-sm" href="#">Free Products</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="w-full lg:w-4/12 px-4">
+                      <span class="block uppercase text-white  text-sm font-semibold mb-2">Other Resources</span>
+                      <ul class="list-unstyled">
+                        <li>
+                          <a class="text-white hover:text-blueGray-100 font-semibold block pb-2 text-sm" href="#">MIT License</a>
+                        </li>
+                        <li>
+                          <a class="text-white hover:text-blueGray-100 font-semibold block pb-2 text-sm" href="#">Terms &amp; Conditions</a>
+                        </li>
+                        <li>
+                          <a class="text-white hover:text-blueGray-100 font-semibold block pb-2 text-sm" href="#">Privacy Policy</a>
+                        </li>
+                        <li>
+                          <a class="text-white hover:text-blueGray-100 font-semibold block pb-2 text-sm" href="https://www.linkedin.com/in/sarah-ndianekwu-58a6a7207/">Contact Us</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr class="my-6 border-blueGray-300">
+              <div class="flex flex-wrap items-center md:justify-between justify-center">
+                <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+                  <div class="text-white hover:text-blueGray-100 font-semibold py-1">
+                    Copyright © <span id="get-current-year">2023</span><a href="https://www.linkedin.com/in/sarah-ndianekwu-58a6a7207/" class="text-white hover:text-blueGray-100" target="_blank"> Django by
+                    <a href="https://www.creative-tim.com?ref=njs-profile" class="text-white hover:text-blueGray-100">Sarahannie</a>.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </footer>
+        <!-- footer end -->
+		
+
+        <script
+        src="https://kit.fontawesome.com/494d29de48.js"
+        crossorigin="anonymous"
+      ></script>
+        <script>
+          const menubtn = document.getElementById("menu-button");
+          const menu = document.getElementById("menu");
+          menubtn.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+          });
+          const drpbtn = document.getElementById("drp-btn");
+          const drpList = document.getElementById("drp-list");
+          drpbtn.addEventListener("click", () => {
+            drpList.classList.toggle("hidden");
+          });
+        </script>
+	</body>
+</html>
